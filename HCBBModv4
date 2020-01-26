@@ -90,7 +90,7 @@ mound.Text = "TELEPORT TO PITCHERS MOUND"
 mound.TextColor3 = Color3.fromRGB(255, 255, 255)
 mound.TextSize = 25.000
 
-ball.Name = "ball"
+ball.Name = "e ball"
 ball.Parent = Frame
 ball.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 ball.BackgroundTransparency = 1.000
@@ -100,7 +100,7 @@ ball.Text = "TELEPORT TO BALL"
 ball.TextColor3 = Color3.fromRGB(255, 255, 255)
 ball.TextSize = 25.000
 
-balldest.Name = "balldest"
+balldest.Name = "e balldest"
 balldest.Parent = Frame
 balldest.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 balldest.BackgroundTransparency = 1.000
@@ -207,8 +207,8 @@ local page2 = game.Players.LocalPlayer.PlayerGui.ModMenu.page2
 local page = 1
 
 
-local ball = game.Players.LocalPlayer.PlayerGui.ModMenu.Frame.ball
-local balldest = game.Players.LocalPlayer.PlayerGui.ModMenu.Frame.balldest
+local ball = game.Players.LocalPlayer.PlayerGui.ModMenu.Frame["e ball"]
+local balldest = game.Players.LocalPlayer.PlayerGui.ModMenu.Frame["e balldest"]
 
 first.MouseButton1Click:Connect(function()
 	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = FirstBase.CFrame
