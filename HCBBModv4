@@ -254,24 +254,28 @@ turnpage.MouseButton1Click:Connect(function()
 	end
 end)
 
+local Player = game:GetService('Players')
+function ChangeTeam(TeamColor)
+	Player.TeamColor = TeamColor
+	local PlayerPos = Player.Character.UpperTorso.CFrame
+	Player.Character.Humanoid.Health = 0
+	wait(game.Players.RespawnTime)
+	Player:WaitForChild('Character'):WaitForChild('UpperTorso').CFrame = PlayerPos
+end
 Away.MouseButton1Click:Connect(function()
-	game.Players.LocalPlayer.TeamColor = BrickColor.new("Bright blue")
-	game.Players.LocalPlayer.Character.Humanoid.Health = 0
+	ChangeTeam(BrickColor.new('Bright blue')
 end)
 
 Official.MouseButton1Click:Connect(function()
-	game.Players.LocalPlayer.TeamColor = BrickColor.new("Gold")
-	game.Players.LocalPlayer.Character.Humanoid.Health = 0
+	ChangeTeam('Gold')
 end)
 
 Fan.MouseButton1Click:Connect(function()
-	game.Players.LocalPlayer.TeamColor = BrickColor.new("White")
-	game.Players.LocalPlayer.Character.Humanoid.Health = 0
+	ChangeTeam('White')
 end)
 
 Home.MouseButton1Click:Connect(function()
-	game.Players.LocalPlayer.TeamColor = BrickColor.new("Bright green")
-	game.Players.LocalPlayer.Character.Humanoid.Health = 0
+	ChangeTeam('Bright green')
 end)
 
 
