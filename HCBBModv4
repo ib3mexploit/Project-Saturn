@@ -254,7 +254,7 @@ turnpage.MouseButton1Click:Connect(function()
 	end
 end)
 
-local Player = game:GetService('Players')
+local Player = game:GetService('Players').LocalPlayer
 function ChangeTeam(TeamColor)
 	Player.TeamColor = TeamColor
 	local PlayerPos = Player.Character.UpperTorso.CFrame
