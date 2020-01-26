@@ -31,6 +31,7 @@ local TurnPage = Instance.new("TextButton")
 ModMenu.Name = "ModMenu"
 ModMenu.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 ModMenu.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+ModMenu.ResetOnSpawn = false
 
 Frame.Parent = ModMenu
 Frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
