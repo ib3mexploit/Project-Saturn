@@ -39,7 +39,8 @@ Frame.Position = UDim2.new(0.790515482, 2, 0.488715917, 0)
 Frame.Size = UDim2.new(0.193831265, 0, 0.495528817, 0)
 Frame.Style = Enum.FrameStyle.DropShadow
 
-first.Name = "first"
+
+first.Name = "a"
 first.Parent = Frame
 first.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 first.BackgroundTransparency = 1.000
@@ -49,7 +50,7 @@ first.Text = "TELEPORT TO FIRST BASE"
 first.TextColor3 = Color3.fromRGB(255, 255, 255)
 first.TextSize = 25.000
 
-second.Name = "second"
+second.Name = "b"
 second.Parent = Frame
 second.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 second.BackgroundTransparency = 1.000
@@ -59,7 +60,7 @@ second.Text = "TELEPORT TO SECOND BASE"
 second.TextColor3 = Color3.fromRGB(255, 255, 255)
 second.TextSize = 25.000
 
-third.Name = "third"
+third.Name = "c"
 third.Parent = Frame
 third.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 third.BackgroundTransparency = 1.000
@@ -69,7 +70,7 @@ third.Text = "TELEPORT TO THIRD BASE"
 third.TextColor3 = Color3.fromRGB(255, 255, 255)
 third.TextSize = 25.000
 
-home.Name = "home"
+home.Name = "d"
 home.Parent = Frame
 home.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 home.BackgroundTransparency = 1.000
@@ -111,7 +112,7 @@ balldest.TextSize = 25.000
 
 UIListLayout.Parent = Frame
 UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
-UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout.SortOrder = Enum.SortOrder.Name
 UIListLayout.VerticalAlignment = Enum.VerticalAlignment.Center
 UIListLayout.Padding = UDim.new(0.050999999, 0)
 
@@ -165,7 +166,7 @@ official.TextSize = 25.000
 
 UIListLayout_2.Parent = page2
 UIListLayout_2.HorizontalAlignment = Enum.HorizontalAlignment.Center
-UIListLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout_2.SortOrder = Enum.SortOrder.Name
 UIListLayout_2.VerticalAlignment = Enum.VerticalAlignment.Center
 UIListLayout_2.Padding = UDim.new(0.050999999, 0)
 
@@ -187,10 +188,10 @@ local HomeBase = workspace.Plates.HomePlate:WaitForChild("HomePlate")
 local MoundBase = workspace.Plates.Mound
 
 
-local first = game.Players.LocalPlayer.PlayerGui.ModMenu.Frame.first 
-local second = game.Players.LocalPlayer.PlayerGui.ModMenu.Frame.second
-local third = game.Players.LocalPlayer.PlayerGui.ModMenu.Frame.third
-local home = game.Players.LocalPlayer.PlayerGui.ModMenu.Frame.home
+local first = game.Players.LocalPlayer.PlayerGui.ModMenu.Frame.a 
+local second = game.Players.LocalPlayer.PlayerGui.ModMenu.Frame.b
+local third = game.Players.LocalPlayer.PlayerGui.ModMenu.Frame.c
+local home = game.Players.LocalPlayer.PlayerGui.ModMenu.Frame.d
 local mound = game.Players.LocalPlayer.PlayerGui.ModMenu.Frame.mound
 
 local Away = game.Players.LocalPlayer.PlayerGui.ModMenu.page2.away
