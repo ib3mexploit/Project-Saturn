@@ -2,4 +2,284 @@
 -- \ SCRIPTED BY IB3M
 
 
-print("testing the updatability")
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ModMenu = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local first = Instance.new("TextButton")
+local second = Instance.new("TextButton")
+local third = Instance.new("TextButton")
+local home = Instance.new("TextButton")
+local mound = Instance.new("TextButton")
+local ball = Instance.new("TextButton")
+local balldest = Instance.new("TextButton")
+local UIListLayout = Instance.new("UIListLayout")
+local page2 = Instance.new("Frame")
+local home_2 = Instance.new("TextButton")
+local fan = Instance.new("TextButton")
+local away = Instance.new("TextButton")
+local official = Instance.new("TextButton")
+local UIListLayout_2 = Instance.new("UIListLayout")
+local TurnPage = Instance.new("TextButton")
+
+
+--Properties:
+
+ModMenu.Name = "ModMenu"
+ModMenu.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ModMenu.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = ModMenu
+Frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Frame.Position = UDim2.new(0.790515482, 2, 0.488715917, 0)
+Frame.Size = UDim2.new(0.193831265, 0, 0.495528817, 0)
+Frame.Style = Enum.FrameStyle.DropShadow
+
+first.Name = "first"
+first.Parent = Frame
+first.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+first.BackgroundTransparency = 1.000
+first.Size = UDim2.new(0, 200, 0, 50)
+first.Font = Enum.Font.SourceSans
+first.Text = "TELEPORT TO FIRST BASE"
+first.TextColor3 = Color3.fromRGB(255, 255, 255)
+first.TextSize = 25.000
+
+second.Name = "second"
+second.Parent = Frame
+second.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+second.BackgroundTransparency = 1.000
+second.Size = UDim2.new(0, 200, 0, 50)
+second.Font = Enum.Font.SourceSans
+second.Text = "TELEPORT TO SECOND BASE"
+second.TextColor3 = Color3.fromRGB(255, 255, 255)
+second.TextSize = 25.000
+
+third.Name = "third"
+third.Parent = Frame
+third.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+third.BackgroundTransparency = 1.000
+third.Size = UDim2.new(0, 200, 0, 50)
+third.Font = Enum.Font.SourceSans
+third.Text = "TELEPORT TO THIRD BASE"
+third.TextColor3 = Color3.fromRGB(255, 255, 255)
+third.TextSize = 25.000
+
+home.Name = "home"
+home.Parent = Frame
+home.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+home.BackgroundTransparency = 1.000
+home.Size = UDim2.new(0, 200, 0, 50)
+home.Font = Enum.Font.SourceSans
+home.Text = "TELEPORT TO HOME PLATE"
+home.TextColor3 = Color3.fromRGB(255, 255, 255)
+home.TextSize = 25.000
+
+mound.Name = "mound"
+mound.Parent = Frame
+mound.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+mound.BackgroundTransparency = 1.000
+mound.Size = UDim2.new(0, 200, 0, 50)
+mound.Font = Enum.Font.SourceSans
+mound.Text = "TELEPORT TO PITCHERS MOUND"
+mound.TextColor3 = Color3.fromRGB(255, 255, 255)
+mound.TextSize = 25.000
+
+ball.Name = "ball"
+ball.Parent = Frame
+ball.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ball.BackgroundTransparency = 1.000
+ball.Size = UDim2.new(0, 200, 0, 50)
+ball.Font = Enum.Font.SourceSans
+ball.Text = "TELEPORT TO BALL"
+ball.TextColor3 = Color3.fromRGB(255, 255, 255)
+ball.TextSize = 25.000
+
+balldest.Name = "balldest"
+balldest.Parent = Frame
+balldest.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+balldest.BackgroundTransparency = 1.000
+balldest.Size = UDim2.new(0, 200, 0, 50)
+balldest.Font = Enum.Font.SourceSans
+balldest.Text = "TELEPORT TO BALL DESTINATION"
+balldest.TextColor3 = Color3.fromRGB(255, 255, 255)
+balldest.TextSize = 25.000
+
+UIListLayout.Parent = Frame
+UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
+UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout.VerticalAlignment = Enum.VerticalAlignment.Center
+UIListLayout.Padding = UDim.new(0.050999999, 0)
+
+page2.Name = "page2"
+page2.Parent = ModMenu
+page2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+page2.Position = UDim2.new(0.790515482, 2, 0.488715917, 0)
+page2.Size = UDim2.new(0.193831265, 0, 0.495528817, 0)
+page2.Visible = false
+page2.Style = Enum.FrameStyle.DropShadow
+
+home_2.Name = "home"
+home_2.Parent = page2
+home_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+home_2.BackgroundTransparency = 1.000
+home_2.Size = UDim2.new(0, 200, 0, 50)
+home_2.Font = Enum.Font.SourceSans
+home_2.Text = "SET LOCAL TEAM TO HOME"
+home_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+home_2.TextSize = 25.000
+
+fan.Name = "fan"
+fan.Parent = page2
+fan.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+fan.BackgroundTransparency = 1.000
+fan.Size = UDim2.new(0, 200, 0, 50)
+fan.Font = Enum.Font.SourceSans
+fan.Text = "SET LOCAL TEAM TO FAN"
+fan.TextColor3 = Color3.fromRGB(255, 255, 255)
+fan.TextSize = 25.000
+
+away.Name = "away"
+away.Parent = page2
+away.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+away.BackgroundTransparency = 1.000
+away.Size = UDim2.new(0, 200, 0, 50)
+away.Font = Enum.Font.SourceSans
+away.Text = "SET LOCAL TEAM TO AWAY"
+away.TextColor3 = Color3.fromRGB(255, 255, 255)
+away.TextSize = 25.000
+
+official.Name = "official"
+official.Parent = page2
+official.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+official.BackgroundTransparency = 1.000
+official.Size = UDim2.new(0, 200, 0, 50)
+official.Font = Enum.Font.SourceSans
+official.Text = "SET LOCAL TEAM TO OFFICIAL"
+official.TextColor3 = Color3.fromRGB(255, 255, 255)
+official.TextSize = 25.000
+
+UIListLayout_2.Parent = page2
+UIListLayout_2.HorizontalAlignment = Enum.HorizontalAlignment.Center
+UIListLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout_2.VerticalAlignment = Enum.VerticalAlignment.Center
+UIListLayout_2.Padding = UDim.new(0.050999999, 0)
+
+TurnPage.Name = "TurnPage"
+TurnPage.Parent = ModMenu
+TurnPage.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TurnPage.Position = UDim2.new(0.772621334, 0, 0.949968159, 0)
+TurnPage.Size = UDim2.new(0.018926302, 0, 0.0333651491, 0)
+TurnPage.Style = Enum.ButtonStyle.RobloxRoundDropdownButton
+TurnPage.Font = Enum.Font.SourceSans
+TurnPage.Text = "1"
+TurnPage.TextColor3 = Color3.fromRGB(0, 0, 0)
+TurnPage.TextSize = 14.000
+
+local FirstBase = workspace.Plates.First:WaitForChild("First")
+local SecondBase = workspace.Plates.Second:WaitForChild("Second")
+local ThirdBase = workspace.Plates.Third:WaitForChild("Third")
+local HomeBase = workspace.Plates.HomePlate:WaitForChild("HomePlate")
+local MoundBase = workspace.Plates.Mound
+
+
+local first = game.Players.LocalPlayer.PlayerGui.ModMenu.Frame.first 
+local second = game.Players.LocalPlayer.PlayerGui.ModMenu.Frame.second
+local third = game.Players.LocalPlayer.PlayerGui.ModMenu.Frame.third
+local home = game.Players.LocalPlayer.PlayerGui.ModMenu.Frame.home
+local mound = game.Players.LocalPlayer.PlayerGui.ModMenu.Frame.mound
+
+local Away = game.Players.LocalPlayer.PlayerGui.ModMenu.page2.away
+local Home = game.Players.LocalPlayer.PlayerGui.ModMenu.page2.home
+local Fan = game.Players.LocalPlayer.PlayerGui.ModMenu.page2.fan
+local Official = game.Players.LocalPlayer.PlayerGui.ModMenu.page2.official
+
+local turnpage = game.Players.LocalPlayer.PlayerGui.ModMenu.TurnPage
+
+local page1 = game.Players.LocalPlayer.PlayerGui.ModMenu.Frame
+local page2 = game.Players.LocalPlayer.PlayerGui.ModMenu.page2
+
+local page = 1
+
+
+local ball = game.Players.LocalPlayer.PlayerGui.ModMenu.Frame.ball
+local balldest = game.Players.LocalPlayer.PlayerGui.ModMenu.Frame.balldest
+
+local agreementframe = game.Players.LocalPlayer.PlayerGui.ModMenu.AgreementBack
+
+first.MouseButton1Click:Connect(function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = FirstBase.CFrame
+end)
+
+second.MouseButton1Click:Connect(function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = SecondBase.CFrame
+end)
+
+third.MouseButton1Click:Connect(function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = ThirdBase.CFrame
+end)
+
+home.MouseButton1Click:Connect(function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = HomeBase.CFrame
+end)
+
+mound.MouseButton1Click:Connect(function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = MoundBase.CFrame
+end)
+
+ball.MouseButton1Click:Connect(function()
+	if game.Workspace.PP:FindFirstChild("Ball") then
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.PP:FindFirstChild("Ball").CFrame
+	end
+end)
+
+balldest.MouseButton1Click:Connect(function()
+	if game.Workspace.Ignore:FindFirstChild("HitTracker") then
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.Ignore:FindFirstChild("HitTracker").CFrame
+	end
+end)
+
+turnpage.MouseButton1Click:Connect(function()
+	if page == 1 then
+		turnpage.Text = 2
+		page = 2
+		page1.Visible = false
+		page2.Visible = true
+	elseif page == 2 then
+		turnpage.Text = 1
+		page = 1
+		page1.Visible = true
+		page2.Visible = false
+	end
+end
+
+Away.MouseButton1Click:Connect(function()
+	game.Players.LocalPlayer.TeamColor = BrickColor.new("Bright blue")
+	game.Players.LocalPlayer.Character.Humanoid.Health = 0
+end
+
+Official.MouseButton1Click:Connect(function()
+	game.Players.LocalPlayer.TeamColor = BrickColor.new("Gold")
+	game.Players.LocalPlayer.Character.Humanoid.Health = 0
+end
+
+Fan.MouseButton1Click:Connect(function()
+	game.Players.LocalPlayer.TeamColor = BrickColor.new("White")
+	game.Players.LocalPlayer.Character.Humanoid.Health = 0
+end
+
+Home.MouseButton1Click:Connect(function()
+	game.Players.LocalPlayer.TeamColor = BrickColor.new("Bright green")
+	game.Players.LocalPlayer.Character.Humanoid.Health = 0
+end
+
+
+
+		
+
+
+
+
