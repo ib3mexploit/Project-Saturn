@@ -25,7 +25,6 @@ local official = Instance.new("TextButton")
 local UIListLayout_2 = Instance.new("UIListLayout")
 local TurnPage = Instance.new("TextButton")
 
-wait(1)
 
 --Properties:
 
