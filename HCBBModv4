@@ -259,8 +259,6 @@ function ChangeTeam(TeamColor)
 	Player.TeamColor = TeamColor
 	local PlayerPos = Player.Character.UpperTorso.CFrame
 	Player.Character:BreakJoints()
-	wait(game.Players.RespawnTime)
-	Player:WaitForChild('Character'):WaitForChild('UpperTorso').CFrame = PlayerPos
 end
 Away.MouseButton1Click:Connect(function()
 	ChangeTeam(BrickColor.new('Bright blue'))
@@ -277,17 +275,5 @@ end)
 Home.MouseButton1Click:Connect(function()
 	ChangeTeam(BrickColor.new('Bright green'))
 end)
-
-
-
-		
-
-
-
-
-
-		
-
-
 
 
