@@ -208,8 +208,6 @@ local page = 1
 local ball = game.Players.LocalPlayer.PlayerGui.ModMenu.Frame.ball
 local balldest = game.Players.LocalPlayer.PlayerGui.ModMenu.Frame.balldest
 
-local agreementframe = game.Players.LocalPlayer.PlayerGui.ModMenu.AgreementBack
-
 first.MouseButton1Click:Connect(function()
 	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = FirstBase.CFrame
 end)
@@ -254,27 +252,33 @@ turnpage.MouseButton1Click:Connect(function()
 		page1.Visible = true
 		page2.Visible = false
 	end
-end
+end)
 
 Away.MouseButton1Click:Connect(function()
 	game.Players.LocalPlayer.TeamColor = BrickColor.new("Bright blue")
 	game.Players.LocalPlayer.Character.Humanoid.Health = 0
-end
+end)
 
 Official.MouseButton1Click:Connect(function()
 	game.Players.LocalPlayer.TeamColor = BrickColor.new("Gold")
 	game.Players.LocalPlayer.Character.Humanoid.Health = 0
-end
+end)
 
 Fan.MouseButton1Click:Connect(function()
 	game.Players.LocalPlayer.TeamColor = BrickColor.new("White")
 	game.Players.LocalPlayer.Character.Humanoid.Health = 0
-end
+end)
 
 Home.MouseButton1Click:Connect(function()
 	game.Players.LocalPlayer.TeamColor = BrickColor.new("Bright green")
 	game.Players.LocalPlayer.Character.Humanoid.Health = 0
-end
+end)
+
+
+
+		
+
+
 
 
 
