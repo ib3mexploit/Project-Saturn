@@ -7,7 +7,7 @@
 
 -- Instances:
 
-local IsInDev = true
+local IsInDev = false
 
 local ModMenu = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
