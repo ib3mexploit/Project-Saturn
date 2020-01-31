@@ -7,6 +7,8 @@
 
 -- Instances:
 
+local IsInDev = false
+
 local ModMenu = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local first = Instance.new("TextButton")
@@ -24,6 +26,10 @@ local away = Instance.new("TextButton")
 local official = Instance.new("TextButton")
 local UIListLayout_2 = Instance.new("UIListLayout")
 local TurnPage = Instance.new("TextButton")
+local indev = Instance.new("Frame")
+local Signature = Instance.new("TextLabel")
+local ImageLabel = Instance.new("ImageLabel")
+local Signature_2 = Instance.new("TextLabel")
 
 
 --Properties:
@@ -181,12 +187,61 @@ TurnPage.Text = "1"
 TurnPage.TextColor3 = Color3.fromRGB(0, 0, 0)
 TurnPage.TextSize = 14.000
 
+ModMenu.Name = "ModMenu"
+ModMenu.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ModMenu.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+indev.Name = "indev"
+indev.Parent = ModMenu
+indev.AnchorPoint = Vector2.new(0, 1)
+indev.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+indev.BackgroundTransparency = 1.000
+indev.Position = UDim2.new(-3.95812094e-09, 0, 1, 0)
+indev.Size = UDim2.new(0.270052493, 0, 0.100000001, 0)
+
+Signature.Name = "Signature"
+Signature.Parent = indev
+Signature.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Signature.BackgroundTransparency = 1.000
+Signature.Size = UDim2.new(1, 0, 1, 0)
+Signature.Font = Enum.Font.Gotham
+Signature.Text = "Designed and Scripted by ib3m & u0fw"
+Signature.TextColor3 = Color3.fromRGB(255, 255, 255)
+Signature.TextSize = 25.000
+Signature.TextXAlignment = Enum.TextXAlignment.Left
+Signature.TextYAlignment = Enum.TextYAlignment.Bottom
+
+ImageLabel.Parent = indev
+ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel.BackgroundTransparency = 1.000
+ImageLabel.Position = UDim2.new(0, 0, -0.629629612, 0)
+ImageLabel.Size = UDim2.new(0.240305915, 0, 1.16356206, 0)
+ImageLabel.Image = "http://www.roblox.com/asset/?id=606955559"
+
+Signature_2.Name = "InDev"
+Signature_2.Parent = indev
+Signature_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Signature_2.BackgroundTransparency = 1.000
+Signature_2.Position = UDim2.new(0.239151031, 0, -0.555555582, 0)
+Signature_2.Size = UDim2.new(1, 0, 1, 0)
+Signature_2.Font = Enum.Font.Gotham
+Signature_2.Text = "IN MAINTENANCE"
+Signature_2.TextColor3 = Color3.fromRGB(255, 170, 0)
+Signature_2.TextScaled = true
+Signature_2.TextSize = 25.000
+Signature_2.TextWrapped = true
+Signature_2.TextXAlignment = Enum.TextXAlignment.Left
+
+if not IsInDev then
+	Signature_2.Visible = false
+	ImageLabel.Visible = false
+end
+
 local FirstBase = workspace.Plates.First:WaitForChild("First")
 local SecondBase = workspace.Plates.Second:WaitForChild("Second")
 local ThirdBase = workspace.Plates.Third:WaitForChild("Third")
 local HomeBase = workspace.Plates.HomePlate:WaitForChild("HomePlate")
 local MoundBase = workspace.Plates.Mound
-
 
 local first = game.Players.LocalPlayer.PlayerGui.ModMenu.Frame.a 
 local second = game.Players.LocalPlayer.PlayerGui.ModMenu.Frame.b
