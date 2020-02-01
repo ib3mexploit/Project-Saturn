@@ -279,21 +279,17 @@ if not IsInDev then
 	ImageLabel.Visible = false
 end
 
-local workspaceball = workspace:WaitForChild("PP"):WaitForChild("Ball")
 local repball = game.ReplicatedStorage:WaitForChild("Ball")
 
 ahalf.MouseButton1Click:Connect(function()
-	workspaceball.Size = Vector3.new(0.25,0.25,0.25)
 	repball.Size = Vector3.new(0.25,0.25,0.25)
 end)
 
 bnormal.MouseButton1Click:Connect(function()
-	workspaceball.Size = Vector3.new(0.5,0.5,0.5)
 	repball.Size = Vector3.new(0.5,0.5,0.5)
 end)
 
 cdouble.MouseButton1Click:Connect(function()
-	workspaceball.Size = Vector3.new(1,1,1)
 	repball.Size = Vector3.new(1,1,1)
 end)
 
