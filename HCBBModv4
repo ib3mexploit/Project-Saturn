@@ -7,7 +7,7 @@
 
 -- Instances:
 
-local IsInDev = false
+local IsInDev = true
 
 local ModMenu = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
@@ -50,7 +50,7 @@ first.Name = "a"
 first.Parent = Frame
 first.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 first.BackgroundTransparency = 1.000
-first.Size = UDim2.new(0, 200, 0, 50)
+first.Size = UDim2.new(0.537,0,0.093,0)
 first.Font = Enum.Font.SourceSans
 first.Text = "TELEPORT TO FIRST BASE"
 first.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -60,7 +60,7 @@ second.Name = "b"
 second.Parent = Frame
 second.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 second.BackgroundTransparency = 1.000
-second.Size = UDim2.new(0, 200, 0, 50)
+second.Size = UDim2.new(0.537,0,0.093,0)
 second.Font = Enum.Font.SourceSans
 second.Text = "TELEPORT TO SECOND BASE"
 second.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -70,7 +70,7 @@ third.Name = "c"
 third.Parent = Frame
 third.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 third.BackgroundTransparency = 1.000
-third.Size = UDim2.new(0, 200, 0, 50)
+third.Size = UDim2.new(0.537,0,0.093,0)
 third.Font = Enum.Font.SourceSans
 third.Text = "TELEPORT TO THIRD BASE"
 third.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -80,7 +80,7 @@ home.Name = "d"
 home.Parent = Frame
 home.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 home.BackgroundTransparency = 1.000
-home.Size = UDim2.new(0, 200, 0, 50)
+home.Size = UDim2.new(0.537,0,0.093,0)
 home.Font = Enum.Font.SourceSans
 home.Text = "TELEPORT TO HOME PLATE"
 home.TextColor3 = Color3.fromRGB(255, 255, 255)
