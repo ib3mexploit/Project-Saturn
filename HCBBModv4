@@ -30,6 +30,11 @@ local indev = Instance.new("Frame")
 local Signature = Instance.new("TextLabel")
 local ImageLabel = Instance.new("ImageLabel")
 local Signature_2 = Instance.new("TextLabel")
+local page3 = Instance.new("Frame")
+local UIListLayout = Instance.new("UIListLayout")
+local cdouble = Instance.new("TextButton")
+local bnormal = Instance.new("TextButton")
+local ahalf = Instance.new("TextButton")
 
 
 --Properties:
@@ -90,7 +95,7 @@ mound.Name = "mound"
 mound.Parent = Frame
 mound.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 mound.BackgroundTransparency = 1.000
-mound.Size = UDim2.new(0, 200, 0, 50)
+mound.Size = UDim2.new(0.537,0,0.093,0)
 mound.Font = Enum.Font.SourceSans
 mound.Text = "TELEPORT TO PITCHERS MOUND"
 mound.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -100,7 +105,7 @@ ball.Name = "e ball"
 ball.Parent = Frame
 ball.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 ball.BackgroundTransparency = 1.000
-ball.Size = UDim2.new(0, 200, 0, 50)
+ball.Size = UDim2.new(0.537,0,0.093,0)
 ball.Font = Enum.Font.SourceSans
 ball.Text = "TELEPORT TO BALL"
 ball.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -110,7 +115,7 @@ balldest.Name = "e balldest"
 balldest.Parent = Frame
 balldest.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 balldest.BackgroundTransparency = 1.000
-balldest.Size = UDim2.new(0, 200, 0, 50)
+balldest.Size = UDim2.new(0.537,0,0.093,0)
 balldest.Font = Enum.Font.SourceSans
 balldest.Text = "TELEPORT TO BALL DESTINATION"
 balldest.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -134,7 +139,7 @@ home_2.Name = "home"
 home_2.Parent = page2
 home_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 home_2.BackgroundTransparency = 1.000
-home_2.Size = UDim2.new(0, 200, 0, 50)
+home_2.Size = UDim2.new(0.537,0,0.093,0)
 home_2.Font = Enum.Font.SourceSans
 home_2.Text = "SET LOCAL TEAM TO HOME"
 home_2.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -144,7 +149,7 @@ fan.Name = "fan"
 fan.Parent = page2
 fan.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 fan.BackgroundTransparency = 1.000
-fan.Size = UDim2.new(0, 200, 0, 50)
+fan.Size = UDim2.new(0.537,0,0.093,0)
 fan.Font = Enum.Font.SourceSans
 fan.Text = "SET LOCAL TEAM TO FAN"
 fan.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -154,7 +159,7 @@ away.Name = "away"
 away.Parent = page2
 away.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 away.BackgroundTransparency = 1.000
-away.Size = UDim2.new(0, 200, 0, 50)
+away.Size = UDim2.new(0.537,0,0.093,0)
 away.Font = Enum.Font.SourceSans
 away.Text = "SET LOCAL TEAM TO AWAY"
 away.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -164,7 +169,7 @@ official.Name = "official"
 official.Parent = page2
 official.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 official.BackgroundTransparency = 1.000
-official.Size = UDim2.new(0, 200, 0, 50)
+official.Size = UDim2.new(0.537,0,0.093,0)
 official.Font = Enum.Font.SourceSans
 official.Text = "SET LOCAL TEAM TO OFFICIAL"
 official.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -232,6 +237,49 @@ Signature_2.TextSize = 25.000
 Signature_2.TextWrapped = true
 Signature_2.TextXAlignment = Enum.TextXAlignment.Left
 
+page3.Name = "page3"
+page3.Parent = game.StarterGui.ModMenu
+page3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+page3.Position = UDim2.new(0.790515482, 2, 0.488715917, 0)
+page3.Size = UDim2.new(0.193831265, 0, 0.495528817, 0)
+page3.Style = Enum.FrameStyle.DropShadow
+page3.Visible = false
+
+UIListLayout.Parent = page3
+UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
+UIListLayout.VerticalAlignment = Enum.VerticalAlignment.Center
+UIListLayout.Padding = UDim.new(0.050999999, 0)
+
+cdouble.Name = "c double"
+cdouble.Parent = page3
+cdouble.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+cdouble.BackgroundTransparency = 1.000
+cdouble.Size = UDim2.new(0.537409008, 0, 0.0934280604, 0)
+cdouble.Font = Enum.Font.SourceSans
+cdouble.Text = "SET BALL SIZE TO 2x"
+cdouble.TextColor3 = Color3.fromRGB(255, 255, 255)
+cdouble.TextSize = 25.000
+
+bnormal.Name = "b normal"
+bnormal.Parent = page3
+bnormal.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+bnormal.BackgroundTransparency = 1.000
+bnormal.Size = UDim2.new(0.537409008, 0, 0.0934280604, 0)
+bnormal.Font = Enum.Font.SourceSans
+bnormal.Text = "SET BALL SIZE TO 1x"
+bnormal.TextColor3 = Color3.fromRGB(255, 255, 255)
+bnormal.TextSize = 25.000
+
+ahalf.Name = "a half"
+ahalf.Parent = page3
+ahalf.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ahalf.BackgroundTransparency = 1.000
+ahalf.Size = UDim2.new(0.537409008, 0, 0.0934280604, 0)
+ahalf.Font = Enum.Font.SourceSans
+ahalf.Text = "SET BALL SIZE TO 0.5x"
+ahalf.TextColor3 = Color3.fromRGB(255, 255, 255)
+ahalf.TextSize = 25.000
+
 if not IsInDev then
 	Signature_2.Visible = false
 	ImageLabel.Visible = false
@@ -258,6 +306,7 @@ local turnpage = game.Players.LocalPlayer.PlayerGui.ModMenu.TurnPage
 
 local page1 = game.Players.LocalPlayer.PlayerGui.ModMenu.Frame
 local page2 = game.Players.LocalPlayer.PlayerGui.ModMenu.page2
+local page3 = game.Players.LocalPlayer.PlayerGui.ModMenu.page3
 
 local page = 1
 
@@ -304,10 +353,15 @@ turnpage.MouseButton1Click:Connect(function()
 		page1.Visible = false
 		page2.Visible = true
 	elseif page == 2 then
+		turnpage.Text = 3
+		page = 3
+		page3.Visible = true
+		page2.Visible = false
+	elseif page == 3 then
 		turnpage.Text = 1
 		page = 1
+		page3.Visible = false
 		page1.Visible = true
-		page2.Visible = false
 	end
 end)
 
