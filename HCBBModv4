@@ -238,7 +238,7 @@ Signature_2.TextWrapped = true
 Signature_2.TextXAlignment = Enum.TextXAlignment.Left
 
 page3.Name = "page3"
-page3.Parent = game.StarterGui.ModMenu
+page3.Parent = game.Players.LocalPlayer.ModMenu
 page3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 page3.Position = UDim2.new(0.790515482, 2, 0.488715917, 0)
 page3.Size = UDim2.new(0.193831265, 0, 0.495528817, 0)
