@@ -279,6 +279,9 @@ if not IsInDev then
 	ImageLabel.Visible = false
 end
 
+local workspaceball = workspace:WaitForChild("PP"):WaitForChild("Ball")
+local repball = game.ReplicatedStorage:WaitForChild("Ball")
+
 local FirstBase = workspace.Plates.First:WaitForChild("First")
 local SecondBase = workspace.Plates.Second:WaitForChild("Second")
 local ThirdBase = workspace.Plates.Third:WaitForChild("Third")
