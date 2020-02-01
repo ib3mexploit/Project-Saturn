@@ -1,13 +1,7 @@
 -- / HCBB MOD MENU V4
 -- \ SCRIPTED BY IB3M
 
-
--- Gui to Lua
--- Version: 3.2
-
--- Instances:
-
-local IsInDev = true
+local IsInDev = false
 
 local ModMenu = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
@@ -31,7 +25,7 @@ local Signature = Instance.new("TextLabel")
 local ImageLabel = Instance.new("ImageLabel")
 local Signature_2 = Instance.new("TextLabel")
 local page3 = Instance.new("Frame")
-local UIListLayout = Instance.new("UIListLayout")
+local UIListLayout_3 = Instance.new("UIListLayout")
 local cdouble = Instance.new("TextButton")
 local bnormal = Instance.new("TextButton")
 local ahalf = Instance.new("TextButton")
@@ -210,7 +204,7 @@ Signature.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Signature.BackgroundTransparency = 1.000
 Signature.Size = UDim2.new(1, 0, 1, 0)
 Signature.Font = Enum.Font.Gotham
-Signature.Text = "Designed and Scripted by ib3m & u0fw"
+Signature.Text = "Designed and Scripted by ib3m & u0fw | Page 3 Contents are currently disabled."
 Signature.TextColor3 = Color3.fromRGB(255, 255, 255)
 Signature.TextSize = 25.000
 Signature.TextXAlignment = Enum.TextXAlignment.Left
@@ -245,10 +239,10 @@ page3.Size = UDim2.new(0.193831265, 0, 0.495528817, 0)
 page3.Style = Enum.FrameStyle.DropShadow
 page3.Visible = false
 
-UIListLayout.Parent = page3
-UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
-UIListLayout.VerticalAlignment = Enum.VerticalAlignment.Center
-UIListLayout.Padding = UDim.new(0.050999999, 0)
+UIListLayout_3.Parent = page3
+UIListLayout_3.HorizontalAlignment = Enum.HorizontalAlignment.Center
+UIListLayout_3.VerticalAlignment = Enum.VerticalAlignment.Center
+UIListLayout_3.Padding = UDim.new(0.050999999, 0)
 
 cdouble.Name = "c double"
 cdouble.Parent = page3
