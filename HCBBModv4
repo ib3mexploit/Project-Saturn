@@ -1,7 +1,7 @@
 -- / HCBB MOD MENU V4
 -- \ SCRIPTED BY IB3M
 
-local IsInDev = false
+local IsInDev = true
 
 local ModMenu = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
@@ -309,34 +309,34 @@ local ball = game.Players.LocalPlayer.PlayerGui.ModMenu.Frame["e ball"]
 local balldest = game.Players.LocalPlayer.PlayerGui.ModMenu.Frame["e balldest"]
 
 first.MouseButton1Click:Connect(function()
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = FirstBase.CFrame
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(FirstBase.Position.x,FirstBase.Position.y+5,FirstBase.Position.z)-- FirstBase.CFrame
 end)
 
 second.MouseButton1Click:Connect(function()
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = SecondBase.CFrame
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(SecondBase.Position.x,SecondBase.Position.y+5,SecondBase.Position.z) -- SecondBase.CFrame
 end)
 
 third.MouseButton1Click:Connect(function()
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = ThirdBase.CFrame
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(ThirdBase.Position.x,ThirdBase.Position.y+5,ThirdBase.Position.z) -- ThirdBase.CFrame
 end)
 
 home.MouseButton1Click:Connect(function()
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = HomeBase.CFrame
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(HomeBase.Position.x,HomeBase.Position.y+5,HomeBase.Position.z)-- HomeBase.CFrame
 end)
 
 mound.MouseButton1Click:Connect(function()
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = MoundBase.CFrame
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(MoundBase.Position.x,MoundBase.Position.y+5,MoundBase.Position.z) -- MoundBase.CFrame
 end)
 
 ball.MouseButton1Click:Connect(function()
 	if game.Workspace.PP:FindFirstChild("Ball") then
-		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.PP:FindFirstChild("Ball").CFrame
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace.PP:FindFirstChild("Ball").Position.x,game.Workspace.PP:FindFirstChild("Ball").Position.y+5,game.Workspace.PP:FindFirstChild("Ball").Position.z) -- game.Workspace.PP:FindFirstChild("Ball").CFrame
 	end
 end)
 
 balldest.MouseButton1Click:Connect(function()
 	if game.Workspace.Ignore:FindFirstChild("HitTracker") then
-		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.Ignore:FindFirstChild("HitTracker").CFrame
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace.Ignore:FindFirstChild("HitTracker").Position.x,game.Workspace.Ignore:FindFirstChild("HitTracker").Position.y+5,game.Workspace.Ignore:FindFirstChild("HitTracker").Position.z)-- game.Workspace.Ignore:FindFirstChild("HitTracker").CFrame
 	end
 end)
 
