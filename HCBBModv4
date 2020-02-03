@@ -300,7 +300,7 @@ TextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextBox.TextScaled = true
 TextBox.TextSize = 14.000
 TextBox.TextWrapped = true
-TextBox.TedtEditable = false
+TextBox.TextEditable = false
 
 Frame0001.Parent = ModMenu
 Frame0001.BackgroundColor3 = Color3.fromRGB(255, 170, 0)
