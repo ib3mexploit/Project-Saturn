@@ -29,6 +29,9 @@ local UIListLayout_3 = Instance.new("UIListLayout")
 local cdouble = Instance.new("TextButton")
 local bnormal = Instance.new("TextButton")
 local ahalf = Instance.new("TextButton")
+local Frame0002 = Instance.new("Frame")
+local TextBox = Instance.new("TextBox")
+local Frame0001 = Instance.new("Frame")
 
 
 --Properties:
@@ -273,6 +276,36 @@ ahalf.Font = Enum.Font.SourceSans
 ahalf.Text = "SET BALL SIZE TO 0.5x"
 ahalf.TextColor3 = Color3.fromRGB(255, 255, 255)
 ahalf.TextSize = 25.000
+
+ModMenu.Name = "ModMenu"
+ModMenu.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ModMenu.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame0002.Parent = ModMenu
+Frame0002.BackgroundColor3 = Color3.fromRGB(62, 62, 62)
+Frame0002.BorderSizePixel = 0
+Frame0002.Position = UDim2.new(0.0187500007, 0, 0.908675909, 0)
+Frame0002.Size = UDim2.new(0.136979163, 0, 0.053703703, 0)
+
+TextBox.Parent = Frame0002
+TextBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextBox.BackgroundTransparency = 1.000
+TextBox.Size = UDim2.new(1, 0, 1, 0)
+TextBox.ClearTextOnFocus = false
+TextBox.Font = Enum.Font.SourceSans
+TextBox.PlaceholderColor3 = Color3.fromRGB(255, 255, 255)
+TextBox.PlaceholderText = "https://discord.gg/HMCKww2"
+TextBox.Text = "https://discord.gg/HMCKww2"
+TextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextBox.TextScaled = true
+TextBox.TextSize = 14.000
+TextBox.TextWrapped = true
+
+Frame0001.Parent = ModMenu
+Frame0001.BackgroundColor3 = Color3.fromRGB(255, 170, 0)
+Frame0001.BorderSizePixel = 0
+Frame0001.Position = UDim2.new(0.0151041662, 0, 0.908675909, 0)
+Frame0001.Size = UDim2.new(0.00364583335, 0, 0.053703703, 0)
 
 if not IsInDev then
 	Signature_2.Visible = false
