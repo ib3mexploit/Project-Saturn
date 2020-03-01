@@ -2,7 +2,7 @@
 -- \ SCRIPTED BY IB3M
 
 local IsInDev = true
-
+local TweenService = game:GetService("TweenService")
 local ModMenu = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local first = Instance.new("TextButton")
@@ -342,9 +342,16 @@ local page = 1
 local ball = game.Players.LocalPlayer.PlayerGui.ModMenu.Frame["e ball"]
 local balldest = game.Players.LocalPlayer.PlayerGui.ModMenu.Frame["e balldest"]
 
-first.MouseButton1Click:Connect(function()
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(FirstBase.Position.x,FirstBase.Position.y+5,FirstBase.Position.z)-- FirstBase.CFrame
-end)
+local TweenInfo = TweenInfo.new(3.5,Enum.EasingStyle.Linear,Enum.EasingDirection.In,0,false,0)
+
+function Tween(pos)
+	local Goal = pos
+	local Object = game.Players.LocalPlayer.Character.HumanoidRootPart
+ 	TweenService:Create(Object, TweenInfo, Goal.CFrame):Play()
+end
+	
+
+first.MouseButton1Click:Connect(Tween(FirstBase))
 
 second.MouseButton1Click:Connect(function()
 	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(SecondBase.Position.x,SecondBase.Position.y+5,SecondBase.Position.z) -- SecondBase.CFrame
