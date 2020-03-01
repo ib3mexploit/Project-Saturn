@@ -338,6 +338,9 @@ local page3 = game.Players.LocalPlayer.PlayerGui.ModMenu.page3
 
 local page = 1
 
+local Ball = game.Workspace.PP:FindFirstChild("Ball")
+
+local HitTracker = game.Workspace.Ignore:FindFirstChild("HitTracker")
 
 local ball = game.Players.LocalPlayer.PlayerGui.ModMenu.Frame["e ball"]
 local balldest = game.Players.LocalPlayer.PlayerGui.ModMenu.Frame["e balldest"]
