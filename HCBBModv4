@@ -352,7 +352,7 @@ function Tween(base)
 	if game.Players.LocalPlayer.TeamColor == BrickColor.new('Gold') then
 		Time = Distance/120
 	else
-		Time = Distance/50
+		Time = Distance/30
 	end
 	local TweenInfo = TweenInfo.new(Time,Enum.EasingStyle.Linear)
 	local goal = {CFrame = CFrame.new(base.Position.X, base.Position.Y + 3.75, base.Position.Z)}
