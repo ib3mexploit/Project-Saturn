@@ -1,1 +1,11 @@
-Fortnite
+
+
+local Player = game.Players.LocalPlayer
+
+--Points of Interest
+local TelekillCFrame = CFrame.new(403,19,-409)
+local ShopCFrame = CFrame.new(684,1.5,470)
+local SellCFrame = CFrame.new(790,1.5,269)
+local TetrahedronCFrame = CFrame.new(298,19,320)
+local RedLakeCFrame = CFrame.new(549,-166,418)
+local FoundationExitCFrame = CFrame.new(490,209.5,1418)
