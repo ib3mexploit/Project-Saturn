@@ -1,7 +1,7 @@
 -- / HCBB MOD MENU V4
 -- \ SCRIPTED BY IB3M
 
-local IsInDev = false
+local IsInDev = true
 
 local ModMenu = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
