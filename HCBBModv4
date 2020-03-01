@@ -338,7 +338,7 @@ local page3 = game.Players.LocalPlayer.PlayerGui.ModMenu.page3
 
 local page = 1
 
-local Ball = game.Workspace.PP:FindFirstChild("Ball")
+
 
 local HitTracker = game.Workspace.Ignore:FindFirstChild("HitTracker")
 
@@ -384,6 +384,7 @@ end)
 
 ball.MouseButton1Click:Connect(function()
 	if game.Workspace.PP:FindFirstChild("Ball") then
+		local Ball = game.Workspace.PP:FindFirstChild("Ball")
 		Tween(Ball)
 	end
 end)
