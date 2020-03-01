@@ -384,14 +384,35 @@ end)
 
 ball.MouseButton1Click:Connect(function()
 	if game.Workspace.PP:FindFirstChild("Ball") then
-		local Ball = game.Workspace.PP:FindFirstChild("Ball")
-		Tween(Ball)
+	local Distance = (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - workspace.PP.Ball.Position).magnitude
+	local Time = nil
+	if game.Players.LocalPlayer.TeamColor == BrickColor.new('Gold') then
+		Time = Distance/120
+	else
+		Time = Distance/50
+	end
+	local TweenInfo = TweenInfo.new(Time,Enum.EasingStyle.Linear)
+	local goal = {CFrame = CFrame.new(workspace.PP.Ball.Position.X, workspace.PP.Ball.Position.Y + 3.75, workspace.PP.Ball.Position.Z)}
+	local HRootPart = game.Players.LocalPlayer.Character.HumanoidRootPart
+	local Anim = TweenService:Create(HRootPart,TweenInfo,goal)
+	Anim:Play()
 	end
 end)
 
 balldest.MouseButton1Click:Connect(function()
-	if game.Workspace.Ignore:FindFirstChild("HitTracker") then
-		Tween(HitTracker)
+	if game.Workspace.PP:FindFirstChild("HitTracker") then
+	local Distance = (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - workspace.PP.HitTracker.Position).magnitude
+	local Time = nil
+	if game.Players.LocalPlayer.TeamColor == BrickColor.new('Gold') then
+		Time = Distance/120
+	else
+		Time = Distance/50
+	end
+	local TweenInfo = TweenInfo.new(Time,Enum.EasingStyle.Linear)
+	local goal = {CFrame = CFrame.new(workspace.PP.HitTracker.Position.X, workspace.PP.HitTracker.Position.Y + 3.75, workspace.PP.HitTracker.Position.Z)}
+	local HRootPart = game.Players.LocalPlayer.Character.HumanoidRootPart
+	local Anim = TweenService:Create(HRootPart,TweenInfo,goal)
+	Anim:Play()
 	end
 end)
 
