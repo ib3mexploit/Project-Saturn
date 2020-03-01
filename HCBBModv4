@@ -401,8 +401,7 @@ end)
 
 balldest.MouseButton1Click:Connect(function()
 	if game.Workspace.PP:FindFirstChild("HitTracker") then
-	local HitTracker = game.Workspace.PP:WaitForChild("HitTracker")
-	local Distance = (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - HitTracker.Position).magnitude
+	local Distance = (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - workspace.PP.HitTracker.Position).magnitude
 	local Time = nil
 	if game.Players.LocalPlayer.TeamColor == BrickColor.new('Gold') then
 		Time = Distance/120
@@ -410,11 +409,12 @@ balldest.MouseButton1Click:Connect(function()
 		Time = Distance/50
 	end
 	local TweenInfo = TweenInfo.new(Time,Enum.EasingStyle.Linear)
-	local goal = {CFrame = CFrame.new(HitTracker.Position.X, HitTracker.Position.Y + 3.75, HitTracker.Position.Z)}
+	local goal = {CFrame = CFrame.new(workspace.PP.HitTracker.Position.X, workspace.PP.HitTracker.Position.Y + 3.75, workspace.PP.HitTracker.Position.Z)}
 	local HRootPart = game.Players.LocalPlayer.Character.HumanoidRootPart
 	local Anim = TweenService:Create(HRootPart,TweenInfo,goal)
 	Anim:Play()
 	end
+	
 end)
 
 turnpage.MouseButton1Click:Connect(function()
