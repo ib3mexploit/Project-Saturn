@@ -346,9 +346,9 @@ local balldest = game.Players.LocalPlayer.PlayerGui.ModMenu.Frame["e balldest"]
 local TweenInfo = TweenInfo.new(3)
 
 first.MouseButton1Click:Connect(function()
-	local Object = game.Players.LocalPlayer.Character.UpperTorso
+	local Object = game.Players.LocalPlayer.Character.HumanoidRootPart
 	local Goal = {CFrame = FirstBase.CFrame}
-	local Anim = TweenService:Create(Object.CFrame,TweenInfo,Goal)
+	local Anim = TweenService:Create(Object,TweenInfo,Goal)
 	Anim:Play()
 end)
 
