@@ -343,40 +343,51 @@ local ball = game.Players.LocalPlayer.PlayerGui.ModMenu.Frame["e ball"]
 local balldest = game.Players.LocalPlayer.PlayerGui.ModMenu.Frame["e balldest"]
 
 
-local TweenInfo = TweenInfo.new(3)
+function Tween(base)
+	local Distance = (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - base.Position).magnitude
+	local Time = nil
+	if game.Players.LocalPlayer.TeamColor == BrickColor.new('Gold') then
+		Time = Distance/120
+	else
+		Time = Distance/50
+	end
+	local TweenInfo = TweenInfo.new(Time,Enum.EasingStyle.Linear)
+	local goal = {CFrame = CFrame.new(base.Position.X, base.Position.Y + 3.75, base.Position.Z)}
+	local HRootPart = game.Players.LocalPlayer.Character.HumanoidRootPart
+	local Anim = TweenService:Create(HRootPart,TweenInfo,goal)
+	Anim:Play()
+end
 
 first.MouseButton1Click:Connect(function()
-	local Object = game.Players.LocalPlayer.Character.HumanoidRootPart
-	local Goal = {CFrame = FirstBase.CFrame}
-	local Anim = TweenService:Create(Object,TweenInfo,Goal)
-	Anim:Play()
+	Tween(FirstBase)
 end)
 
 second.MouseButton1Click:Connect(function()
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(SecondBase.Position.x,SecondBase.Position.y+5,SecondBase.Position.z) -- SecondBase.CFrame
+	Tween(SecondBase)
 end)
 
 third.MouseButton1Click:Connect(function()
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(ThirdBase.Position.x,ThirdBase.Position.y+5,ThirdBase.Position.z) -- ThirdBase.CFrame
+	Tween(ThirdBase)
 end)
 
 home.MouseButton1Click:Connect(function()
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(HomeBase.Position.x,HomeBase.Position.y+5,HomeBase.Position.z)-- HomeBase.CFrame
+	Tween(HomeBase)
+
 end)
 
 mound.MouseButton1Click:Connect(function()
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(MoundBase.Position.x,MoundBase.Position.y+5,MoundBase.Position.z) -- MoundBase.CFrame
+	Tween(MoundBase)
 end)
 
 ball.MouseButton1Click:Connect(function()
 	if game.Workspace.PP:FindFirstChild("Ball") then
-		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace.PP:FindFirstChild("Ball").Position.x,game.Workspace.PP:FindFirstChild("Ball").Position.y+5,game.Workspace.PP:FindFirstChild("Ball").Position.z) -- game.Workspace.PP:FindFirstChild("Ball").CFrame
+		Tween(Ball)
 	end
 end)
 
 balldest.MouseButton1Click:Connect(function()
 	if game.Workspace.Ignore:FindFirstChild("HitTracker") then
-		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace.Ignore:FindFirstChild("HitTracker").Position.x,game.Workspace.Ignore:FindFirstChild("HitTracker").Position.y+5,game.Workspace.Ignore:FindFirstChild("HitTracker").Position.z)-- game.Workspace.Ignore:FindFirstChild("HitTracker").CFrame
+		Tween(HitTracker)
 	end
 end)
 
