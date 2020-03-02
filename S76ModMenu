@@ -126,6 +126,6 @@ function LocTP(CFrame)
 	Anim:Play()
 end
 ForceReset.MouseButton1Click:Connect(function()
-	local KillTP = CFrame.New(0,-500,0)
+	local KillTP = CFrame.new(0,-500,0)
 	LocTP(KillTP)
 end)
