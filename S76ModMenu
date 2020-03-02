@@ -2,6 +2,9 @@
 -- \ SCRIPTED BY IB3M AND U0FW
 
 local Player = game.Players.LocalPlayer
+local TweenService = game:GetService('TweenService')
+local ReplicatedStorage = game:GetService('ReplicatedStorage')
+
 
 --Points of Interest
 local TelekillCFrame = CFrame.new(403,19,-409)
@@ -10,3 +13,11 @@ local SellCFrame = CFrame.new(790,1.5,269)
 local TetrahedronCFrame = CFrame.new(298,19,320)
 local RedLakeCFrame = CFrame.new(549,-166,418)
 local FoundationExitCFrame = CFrame.new(490,209.5,1418)
+
+
+function PlayerTP(Player)
+  
+end
+function LocTP(CFrame)
+
+end
