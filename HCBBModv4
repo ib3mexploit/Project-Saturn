@@ -36,7 +36,7 @@ local Frame0001 = Instance.new("Frame")
 
 --Properties:
 
-ModMenu.Name = "ModMenu"
+ModMenu.Name = "Gameing"
 ModMenu.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 ModMenu.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 ModMenu.ResetOnSpawn = false
