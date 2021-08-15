@@ -36,7 +36,7 @@ local Frame0001 = Instance.new("Frame")
 
 --Properties:
 
-ModMenu.Name = "math.random(1,99999)"
+ModMenu.Name = tostring(math.random(1,99999))
 ModMenu.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 ModMenu.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 ModMenu.ResetOnSpawn = false
